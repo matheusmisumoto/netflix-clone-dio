@@ -24,18 +24,19 @@ body {
 .logo { 
     color: var(--red); 
     font-family: 'Arial Black', 'Times'; 
-    font-size: 40px;
+    font-size: 2.25em;
 }
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 20px;
+    margin: .5em 4em;
 }
 header nav a { 
     text-decoration: none;
     color: var(--grey);
-    margin-right: 10px;
+    margin-right: 2em;
+    font-size: .875em;
 }
 header nav a:hover {
     color: var(--white);
@@ -69,31 +70,35 @@ header nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2; object-fit: contain; object-position: center right; }
+    z-index: -2; 
+    object-fit: contain; 
+    object-position: center right;
+}
 .featured .container { 
     margin: 0 100px; 
     max-width: 50%;
 }
 .featured h3 { 
-    font-size: 3em;
+    font-size: 3vw;
     line-height: 1.5em;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 .featured p { 
-    font-size: 1.5em;
+    font-size: 1.25vw;
     line-height: 1.25em;
     color: var(--grey);
 }
-.featured .buttons { 
+.featured .buttons {
+    width: 66%; 
     display: flex; 
     justify-items: space-between; 
     margin-top: 2em;
 }
 .featured button { 
-    flex: 1;
+    flex: 1.5;
     font-size: 1.25em;
-    padding: 1em;
+    padding: 1em .25em;
     background: var(--black); 
     border: 1px solid var(--white); 
     border-radius: .5em; 
@@ -107,6 +112,7 @@ header nav a:hover {
     color: var(--black); 
 }
 .featured button:first-of-type { 
+    flex: 1;
     margin-right: 50px; 
     color: var(--black); 
     background: var(--white);
@@ -117,9 +123,32 @@ header nav a:hover {
 
 /* CATEGORY */
 .category { 
-    margin: 20px 100px; 
+    padding: 1em 0; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: flex-start;
+    overflow: hidden;
+}
+.category h2 {
+    margin: 1em 10rem;
+}
+.category ul {
+    display: flex;
+    overflow-x: hidden;
+    gap: 1em;
+    list-style: none;
+    margin-bottom: 3rem;
+}
+.category li:first-of-type {
+    margin-left: 10rem;
+}
+.category li > img {
+    height: 10rem;
+    width: auto;
+}
+footer {
+    text-align: center;
+    padding: 2em;
+    font-weight: 300;
 }
