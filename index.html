@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/glider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/glider.min.css">
 </head>
 <body>
     <header>
@@ -37,28 +39,61 @@
         </div>
         <div class="category">
             <h2>Continue watching</h2>
-            <ul>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-            </ul>
+            <div class="glider-contain">
+                <div class="glider-continue">
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                </div>
+                <button aria-label="Previous" class="glider-prev continue-prev">⮜</button>
+                <button aria-label="Next" class="glider-next continue-next">⮞</button>
+            </div>
+
             <h2>Suggested for you</h2>
-            <ul>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-                <li><img src="img/tbbt.jpg"></li>
-            </ul>
+            <div class="glider-contain">
+                <div class="glider-suggested">
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                    <div><img src="img/tbbt.jpg"></div>
+                </div>
+                <button aria-label="Previous2" class="glider-prev suggested-prev">⮜</button>
+                <button aria-label="Next2" class="glider-next suggested-next">⮞</button>
+            </div>
         </div>
     </main>
     <footer>
         <p>Bazinga is a Netflix home screen clone project.</p>
         <p>Images contained in this repository are used for educational purposes only.</p>
     </footer>
+    <script>
+        window.addEventListener('load', function(){
+            new Glider(document.querySelector('.glider-continue'), {
+                slidesToScroll: 1,
+                slidesToShow: 5.5,
+                draggable: true,
+                arrows: {
+                    prev: '.continue-prev',
+                    next: '.continue-next'
+                }
+            });
+        })
+        window.addEventListener('load', function(){
+            new Glider(document.querySelector('.glider-suggested'), {
+                slidesToScroll: 1,
+                slidesToShow: 5.5,
+                draggable: true,
+                arrows: {
+                    prev: '.suggested-prev',
+                    next: '.suggested-next'
+                }
+            });
+        })
+    </script>
 </body>
 </html>

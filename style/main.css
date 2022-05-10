@@ -131,24 +131,30 @@ header nav a:hover {
     overflow: hidden;
 }
 .category h2 {
-    margin: 1em 10rem;
+    margin: 1em 0 1em 10rem;
 }
-.category ul {
-    display: flex;
-    overflow-x: hidden;
+.glider-container { 
+    margin: 0 2em;
+}
+.category h2:not(:first-of-type){
+    margin-top: 3em;
+}
+.glider div {
     gap: 1em;
-    list-style: none;
-    margin-bottom: 3rem;
 }
-.category li:first-of-type {
-    margin-left: 10rem;
+.glider div:first-of-type {
+    margin-left: 5em;
 }
-.category li > img {
-    height: 10rem;
-    width: auto;
+.glider div:last-of-type {
+    margin-right: 1em;
 }
-footer {
+button.glider-prev {
+    left: 0;
+}
+button.glider-next {
+    right: 0;
+}
+footer { 
+    margin: 4em 0 2em 0;
     text-align: center;
-    padding: 2em;
-    font-weight: 300;
 }
